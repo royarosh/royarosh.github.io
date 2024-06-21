@@ -58,6 +58,7 @@ a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    outline: none;
     border: 0;
 }
 .brand-btn:hover {
@@ -108,6 +109,9 @@ nav a.dummy {
 nav a:not(.dummy):hover {
     color: var(--brand1);
 }
+nav .mobile-menu-btn {
+    display: none;
+}
 
 section, footer {
     max-width: 1200px;
@@ -157,7 +161,6 @@ section, footer {
 }
 #hero .textbox {
     width: 800px;
-    max-width: 100%;
     margin-left: calc(66vh - 2em);
 }
 #hero .textbox .subtitle {
@@ -343,6 +346,10 @@ section, footer {
 #contact .section-title {
     margin-bottom: 1em;
 }
+#contact form {
+    width: 400px;
+    max-width: 100%;
+}
 #contact label {
     position: relative;
     left: 1.5em;
@@ -357,8 +364,7 @@ section, footer {
     padding: 1em 1.5em;
     border-radius: .7em;
     appearance: none;
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
     outline: none;
 }
 #contact select {
@@ -368,8 +374,16 @@ section, footer {
 #contact button {
     margin-top: .7em;
     border-radius: .7em .7em 1.5em 1.5em;
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
+}
+#contact-res {
+    margin-top: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    color: var(--brand1);
+}
+#contact-res.err {
+    color: #ed611a;
 }
 
 footer {
@@ -387,13 +401,75 @@ footer .watermark a {
 }
 
 
+@media (max-width: 800px) {
+    nav {
+        width: 100svw;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    nav a.dummy {
+        display: none;
+    }
+    nav .mobile-menu-btn {
+        display: block;
+        height: 2.5em;
+        z-index: 11;
+    }
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100svh;
+        width: 100%;
+        background-color: #000e;
+        gap: 2.5em;
+    }
+    nav .menu.open {
+        display: flex;
+    }
+    
+    #hero .textbox {
+        margin-left: 2em;
+        width: calc(100% - 4em);
+    }
+}
 @media (max-width: 600px) {
     :root {
         font-size: 13px;
     }
+    section, footer {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .section-title .line {
+        left: 0;
+    }
+
+    #hero {
+        height: fit-content;
+    }
+    #hero .main-img {
+        width: 100%;
+        height: unset;
+    }
+    #hero .title {
+        font-size: 3em;
+        text-shadow: 0 0 .5em #000;
+    }
+
+    #design .design {
+        width: 100%;
+    }
 
     #photo img.vert {
         height: unset;
-        width: 100%;
+        width: calc(100% - 1em);
     }
 }
