@@ -139,5 +139,33 @@
         </div>
         <a href="#contact" class="brand-btn">Записатись на урок</a>
     </section>
+    <section id="contact">
+        <h1 class="section-title">Контактувати<div class="line"></div></h1>
+        <!-- <form action="mailto:contact.yarosh@gmail.com" method="post" enctype="text/plain"> -->
+        <form action="./static/mail.inc.php" method="post" enctype="text/plain">
+            <label for="subject-select">Тема (натисни)</label><br>
+            <select name="subject" id="subject-select">
+                <option value="photosession">Запис на фотосесію</option>
+                <option value="order-of-design">Замовлення дизайну</option>
+                <option value="lesson-arrangament">Запис на урок</option>
+                <option value="other">Інше</option>
+            </select><br>
+
+            <label for="name-inp">Твоє імʼя</label><br>
+            <input placeholder="Введи імʼя..." type="text" id="name-inp" name="name" required><br>
+
+            <label for="email-inp">Твій email</label><br>
+            <input placeholder="Введи email..." type="email" id="email-inp" name="email" required><br>
+
+            <label for="message-inp">Повідомлення (необовʼязково)</label><br>
+            <textarea placeholder="Введи повідомлення..." name="message" id="message-inp" rows="4"></textarea><br>
+
+            <button class="brand-btn" type="submit">Надіслати</button>
+        </form>
+    </section>
+    <footer>
+        <p class="copy">&copy; 2024 Yarosh</p>
+        <p class="watermark">Created by <a href="https://impreent.com">Impreent</a></p>
+    </footer>
 </body>
 </html>

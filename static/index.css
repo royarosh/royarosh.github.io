@@ -39,8 +39,6 @@ html {
 body {
     background-color: var(--bg1);
     overflow-x: hidden;
-
-    margin-bottom: 10em;
 }
 a {
     text-decoration: none;
@@ -59,6 +57,8 @@ a {
     transition: 50ms;
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
+    border: 0;
 }
 .brand-btn:hover {
     opacity: .8;
@@ -109,7 +109,7 @@ nav a:not(.dummy):hover {
     color: var(--brand1);
 }
 
-section {
+section, footer {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -338,6 +338,54 @@ section {
 #tutor .feature * {
     color: var(--bg1);
 }
+
+
+#contact .section-title {
+    margin-bottom: 1em;
+}
+#contact label {
+    position: relative;
+    left: 1.5em;
+    top: .6em;
+    background-color: var(--bg1);
+    border-radius: .2em;
+}
+#contact input, #contact select, #contact textarea {
+    background-color: #0000;
+    resize: none;
+    border: 1px solid #777;
+    padding: 1em 1.5em;
+    border-radius: .7em;
+    appearance: none;
+    width: 400px;
+    max-width: 100%;
+    outline: none;
+}
+#contact select {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+#contact button {
+    margin-top: .7em;
+    border-radius: .7em .7em 1.5em 1.5em;
+    width: 400px;
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .7em 1.5em;
+    padding-top: 0;
+    padding-bottom: 1.5em;
+}
+footer .watermark a {
+    font-family: var(--font1);
+    font-weight: 300;
+    color: var(--brand1);
+}
+
 
 @media (max-width: 600px) {
     :root {
