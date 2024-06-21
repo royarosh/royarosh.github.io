@@ -31,26 +31,26 @@
         <img src="./static/img/hero.jpg" alt="Yarosh - Фотограф, дизайнер, викладач" class="main-img">
         <div class="textbox">
             <p class="subtitle">
-                <img src="./static/img/hero.hand.svg" alt="Hello!">, я Yarosh і я
+                <img src="./static/img/icons/hand.svg" alt="Hello!">, я Yarosh і я
             </p>
             <h1 class="title" data-hero-changing-text></h1>
             <a href="#contact" class="brand-btn">Контактувати</a>
             <p class="location">
-                <img src="./static/img/hero.pin.svg" alt="Я з Тернополя" class="w-4">
+                <img src="./static/img/icons/pin.svg" alt="Я з Тернополя" class="w-4">
                 Тернопіль
             </p>
         </div>
     </section>
     <section id="about">
         <h1 class="section-title">Про мене <div class="line"></div></h1>
-        <p class="body">
+        <p class="section-subtitle">
             Привіт, я Рома Ярошевський, крутий хлоп з тернополя, розказую трохи про себе.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem, rem recusandae animi aliquam, magnam labore nostrum eligendi, vel dolorem sequi debitis delectus eveniet perspiciatis nihil soluta iste asperiores nam.
         </p>
         <h2>Експертність</h2>
         <div class="cards-wrapper">
-            <div class="card" style="background-color:#e68696">
-                <img src="./static/img/about.camera.svg" alt="Я фотограф">
+            <div class="card" style="background-color:var(--brand2)">
+                <img src="./static/img/icons/camera.svg" alt="Я фотограф">
                 <p class="header">01</p>
                 <h3 class="title">Фотограф</h3>
                 <div class="bottom-wrapper">
@@ -58,8 +58,8 @@
                     <a href="#photo" class="cta">Більше...</a>
                 </div>
             </div>
-            <div class="card" style="background-color: var(--brand1)">
-                <img src="./static/img/about.design.svg" alt="Я графічний дизайнер">
+            <div class="card" style="background-color:var(--brand1)">
+                <img src="./static/img/icons/design.svg" alt="Я графічний дизайнер">
                 <p class="header">02</p>
                 <h3 class="title">Дизайнер</h3>
                 <div class="bottom-wrapper">
@@ -67,8 +67,8 @@
                     <a href="#design" class="cta">Більше...</a>
                 </div>
             </div>
-            <div class="card" style="background-color:#fbad1d">
-                <img src="./static/img/about.tutor.svg" alt="Я викладач">
+            <div class="card" style="background-color:var(--brand3)">
+                <img src="./static/img/icons/tutor.svg" alt="Я викладач">
                 <p class="header">03</p>
                 <h3 class="title">Викладач</h3>
                 <div class="bottom-wrapper">
@@ -79,7 +79,65 @@
         </div>
     </section>
     <section id="photo">
-        <h1 class="section-title">Фотограф<div class="line"></div></h1>
+        <h1 class="section-title expertise">Фотограф<div class="lines"></div></h1>
+        <div class="photos-wrapper">
+            <img class="vert" src="./static/img/photos/1.friends.jpg" alt="Фотопортрет">
+            <img src="./static/img/photos/5.guy-tennis-gray.jpg" alt="Фотопортрет">
+            <img class="green" src="./static/img/photos/2.girl-ballons.png" alt="Фотопортрет">
+            <img src="./static/img/photos/3.guy-gray-stand.jpg" alt="Фотопортрет">
+            <img src="./static/img/photos/2.girls-laugh.png" alt="Фотопортрет">
+            <img src="./static/img/photos/2.girls-pack.png" alt="Фотопортрет">
+            <img class="green" src="./static/img/photos/3.guy-gray-hand.jpg" alt="Фотопортрет">
+            <img src="./static/img/photos/4.guy-shadow.jpg" alt="Фотопортрет">
+            <img class="vert" src="./static/img/photos/1.girl-field.jpg" alt="Фотопортрет">
+            <img src="./static/img/photos/5.guy-tennis-color.jpg" alt="Фотопортрет">
+        </div>
+        <a href="#contact" class="brand-btn">Хочу на фотосесію</a>
+    </section>
+    <section id="design">
+        <h1 class="section-title expertise" style="text-align: center">Дизайнер</h1>
+        <div class="designs-wrapper">
+            <div class="design">
+                <img src="./static/img/design/1.png" alt="Графічний дизайн">
+                <p>Опис цього дизайну</p>
+            </div>
+            <div class="design">
+                <img src="./static/img/design/2.png" alt="Графічний дизайн">
+                <p>Опис цього дизайну</p>
+            </div>
+            <div class="design">
+                <img src="./static/img/design/3.png" alt="Графічний дизайн">
+                <p>Опис цього дизайну</p>
+            </div>
+            <div class="design">
+                <img src="./static/img/design/4.png" alt="Графічний дизайн">
+                <p>Опис цього дизайну</p>
+            </div>
+            <div class="design">
+                <img src="./static/img/design/5.png" alt="Графічний дизайн">
+                <p>Опис цього дизайну</p>
+            </div>
+        </div>
+        <a href="#contact" class="brand-btn cta">Зроби мені дизайн</a>
+    </section>
+    <section id="tutor">
+        <h1 class="section-title expertise">Викладач</h1>
+        <p class="section-subtitle">Я і ще й репетитор з англ</p>
+        <div class="features-wrapper">
+            <div class="feature" style="background-color: var(--brand3)">
+                <p class="title">Знання мови</p>
+                <h3 class="value">B-2+</h3>
+            </div>
+            <div class="feature" style="background-color: var(--brand1)">
+                <p class="title">Освіта</p>
+                <h3 class="value">Студент</h3>
+            </div>
+            <div class="feature" style="background-color: var(--brand2)">
+                <p class="title">Пробне заняття</p>
+                <h3 class="value">+</h3>
+            </div>
+        </div>
+        <a href="#contact" class="brand-btn">Записатись на урок</a>
     </section>
 </body>
 </html>

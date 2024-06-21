@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 :root {
-    --brand1: #e48334;
     --brand1: #d0ea55;
+    --brand2: #e68696;
+    --brand3: #fbad1d;
     --bg1: #000;
     --color1: #fefefe;
     --color2: #a3a3a3;
@@ -77,6 +78,8 @@ nav section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 nav h1 {
     font-weight: 600;
@@ -110,7 +113,7 @@ section {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 4em;
+    padding: 5em 4em;
 }
 .section-title {
     font-size: 3em;
@@ -130,6 +133,10 @@ section {
     translate: -50% -50%;
     z-index: -1;
 }
+.section-subtitle {
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
 
 /* --- end global styles --- */
 
@@ -140,11 +147,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
 }
 #hero .main-img {
     position: absolute;
-    height: 100%;
+    height: 100svh;
     left: 0;
     top: 0;
     z-index: -1;
@@ -152,6 +158,7 @@ section {
 #hero .textbox {
     width: 800px;
     max-width: 100%;
+    margin-left: calc(66vh - 2em);
 }
 #hero .textbox .subtitle {
     display: flex;
@@ -180,12 +187,8 @@ section {
 
 
 #about {
-    margin-top: 10em;
-    margin-bottom: 12em;
-}
-#about .body {
-    margin-top: 1em;
-    margin-bottom: 4em;
+    margin-top: 5em;
+    margin-bottom: 7em;
 }
 #about .cards-wrapper {
     display: flex;
@@ -245,4 +248,104 @@ section {
 }
 #about .card .cta:hover::before {
     width: 120%;
+}
+
+
+.section-title.expertise {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+#photo .photos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em   
+}
+#photo img {
+    height: 20em;
+    box-sizing: content-box;
+    border: 1px solid var(--color1);
+}
+#photo img.green {
+    border-color: var(--brand1);
+}
+#photo img.vert {
+    border: .5em solid var(--color1);
+    border-bottom-width: 4em;
+}
+
+#design .designs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    gap: 1.5em;
+}
+
+#design .design {
+    width: 20em;
+    max-width: 100%;
+    border-radius: 1.5em;
+    overflow: hidden;
+    position: relative;
+}
+#design .design img {
+    width: 100%;
+    height: 100%;
+}
+#design .design p {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5em;
+    background-color: #fffe;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--bg1);
+    font-size: 1.2em;
+    transition: 300ms;
+}
+#design .design:hover p {
+    opacity: 1;
+}
+#design .cta {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+}
+
+#tutor .section-title {
+    margin-bottom: 0;
+}
+#tutor .section-subtitle {
+    margin-bottom: 2em;
+}
+#tutor .features-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-bottom: 1em;
+}
+#tutor .feature {
+    width: 15em;
+    max-width: 100%;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+#tutor .feature * {
+    color: var(--bg1);
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 13px;
+    }
+
+    #photo img.vert {
+        height: unset;
+        width: 100%;
+    }
 }
