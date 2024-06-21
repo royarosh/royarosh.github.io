@@ -1,17 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yarosh Фотограф</title>
+    <title>Yarosh</title>
 
+    <link rel="shortcut icon" href="./static/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./static/index.css">
     <script src="./static/index.js" defer></script>
+    <script src="./static/tw.js"></script>
 </head>
-<body>
-    <div class="lense-wrapper">
-        <h1>Роман Ярошевський</h1>
-        <div class="lense"></div>
-    </div>
+<body class="bg-black overflow-x-hidden mb-52">
+    <nav class="top-0 fixed w-screen left-0 bg-black bg-opacity-70 py-5 backdrop-blur-md z-10">
+        <section class="flex justify-between items-center">
+            <h1 class="font-semibold text-xl flex items-center gap-2 select-none">
+                <img src="./static/img/logo.svg" alt="Yarosh - Фотограф, дизайнер, викладач" class="w-5">
+                Yarosh
+            </h1>
+            <div class="flex gap-7">
+                <a href="#about">Я</a>
+                <a class="dummy select-none">|</a>
+                <a href="#photo">Фотограф</a>
+                <a href="#design">Дизайнер</a>
+                <a href="#tutor">Викладач</a>
+                <a class="dummy select-none">|</a>
+                <a href="#contact">Контактувати</a>
+            </div>
+        </section>
+    </nav>
+    <section class="max-w-none min-h-screen py-16 flex-col flex justify-center items-end">
+        <img class="absolute h-screen left-0 top-0 -z-10" 
+            src="./static/img/hero.jpg" alt="Yarosh - Фотограф, дизайнер, викладач">
+        <div style="width:800px">
+            <p class="text-xl flex items-center mb-5 text-gray-300">
+                <img src="./static/img/hero.hand.svg" alt="Hello!" class="w-5 rotate-12">,
+                я Yarosh і я
+            </p>
+            <h1 class="text-7xl uppercase font-bold" data-hero-changing-text></h1>
+            <a href="#contact" class="brand-btn">Контактувати</a>
+            <p class="flex gap-1 mt-2">
+                <img src="./static/img/hero.pin.svg" alt="Я з Тернополя" class="w-4">
+                Тернопіль
+            </p>
+        </div>
+    </section>
+    <section id="about" class="mt-32">
+        <h1 class="section-title">Про мене <div class="line"></div></h1>
+        <p class="mt-2">
+            Привіт, я Рома Ярошевський, крутий хлоп з тернополя, розказую трохи про себе.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem, rem recusandae animi aliquam, magnam labore nostrum eligendi, vel dolorem sequi debitis delectus eveniet perspiciatis nihil soluta iste asperiores nam.
+        </p>
+        <h2 class="text-3xl font-semibold mt-20">Експертність</h2>
+        <div class="flex gap-4 mt-8">
+            <div class="card bg-pink-300">
+                <img src="./static/img/about.camera.svg" alt="Я фотограф">
+                <p class="header">01</p>
+                <h3 class="title">Фотограф</h3>
+                <div class="bottom-wrapper">
+                    <p class="desc">Я роблю круті фото портрети</p>
+                    <a href="#photo" class="cta">Більше...</a>
+                </div>
+            </div>
+            <div class="card" style="background-color: var(--brand1)">
+                <img src="./static/img/about.design.svg" alt="Я графічний дизайнер">
+                <p class="header">02</p>
+                <h3 class="title">Дизайнер</h3>
+                <div class="bottom-wrapper">
+                    <p class="desc">Я дуже крутий графічний дизайнер</p>
+                    <a href="#design" class="cta">Більше...</a>
+                </div>
+            </div>
+            <div class="card bg-orange-400">
+                <img src="./static/img/about.tutor.svg" alt="Я викладач">
+                <p class="header">03</p>
+                <h3 class="title">Викладач</h3>
+                <div class="bottom-wrapper">
+                    <p class="desc">Я супер пупер репетитор з англійської</p>
+                    <a href="#tutor" class="cta">Більше...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="photo">
+        <h1 class="section-title">Фотограф<div class="line"></div></h1>
+    </section>
 </body>
 </html>
