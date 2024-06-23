@@ -31,7 +31,7 @@ function toggleNav() {
 
 
 const heroChangingText = document.querySelector('[data-hero-changing-text]');
-const heroChangingTextContent = ['фотограф', 'дизайнер', 'викладач'];
+const heroChangingTextContent = ['викладач', 'репетитор', 'brawl-starser'];
 const heroTextAnimationDuration = 150;
 function animateHeroText(i) {
     const textIndex = i >= heroChangingTextContent.length ? 0 : i;
@@ -56,6 +56,49 @@ function animateHeroText(i) {
     setTimeout(() => { animateHeroText(textIndex + 1) }, 3000);
 }
 animateHeroText(0);
+
+
+// function initPhotosCarousel() {
+//     (document.querySelector('#photo .carousel')).querySelectorAll('img').forEach(img => {
+//         img.style.left = img.getBoundingClientRect().left + 'px';
+//         img.style.top = 0;
+//     });
+//     (document.querySelector('#photo .carousel')).querySelectorAll('img').forEach(img => {
+//         img.style.position = 'absolute';
+//     });
+// }
+// // initPhotosCarousel();
+
+// function moveCarousel() {
+//     const parentRect = (document.querySelector('#photo .carousel')).getBoundingClientRect();
+//     (document.querySelector('#photo .carousel')).querySelectorAll('img').forEach(img => {
+//         const imgRect = img.getBoundingClientRect();
+        
+//         let currTranslate = window.getComputedStyle(img).translate;
+//         currTranslate = currTranslate.slice(0, currTranslate.length - 2);
+//         const currPos = Number(currTranslate) ? Number(currTranslate) : 0;
+//         img.style.translate = currPos - 1 + 'px 0';
+        
+//         if (parentRect.left > imgRect.right) {
+//             let smallestRight = 0;
+
+//             (document.querySelector('#photo .carousel')).querySelectorAll('img').forEach(img => {
+//                 let currTranslate = window.getComputedStyle(img).translate;
+//                 currTranslate = Number(currTranslate.slice(0, currTranslate.length - 2));
+
+//                 if (currTranslate > smallestRight) {
+//                     smallestRight = currTranslate + img.offsetWidth;
+//                 } 
+//             });
+//             console.log(smallestRight);
+
+//             img.style.translate = `${smallestRight}px 0`;
+//         }
+//     });
+
+//     requestAnimationFrame(moveCarousel);
+// }
+// moveCarousel();
 
 
 const contactForm = document.querySelector('#contact form');
@@ -104,7 +147,7 @@ ${contactForm.message.value}
         contactForm.reset();
         contactResEl.textContent = 'Повідомлення надіслано! Я звʼяжуся з тобою впродовж 8-ми годин.';
         localStorage.setItem('contact-tries', contactTries + 1);
-        // localStorage.setItem('contact-tries-expiry', Date.now() + 24 * 3600_000);
+
         const currentDate = new Date();
         currentDate.setDate(currentDate.getDate() + 1);
         currentDate.setHours(0, 0, 0, 0);

@@ -82,15 +82,16 @@ nav section {
     padding-top: 0;
     padding-bottom: 0;
 }
-nav h1 {
+nav .logo {
     font-weight: 600;
     font-size: 1.2em;
     display: flex;
     align-items: center;
     gap: .3em;
     user-select: none;
+    cursor: pointer;
 }
-nav h1 img {
+nav .logo img {
     width: 1em;
 }
 nav .menu {
@@ -106,7 +107,7 @@ nav a {
 nav a.dummy {
     user-select: none;
 }
-nav a:not(.dummy):hover {
+nav .menu a:not(.dummy):hover {
     color: var(--brand1);
 }
 nav .mobile-menu-btn {
@@ -259,22 +260,45 @@ section, footer {
     width: 100%;
 }
 
-#photo .photos-wrapper {
+.features-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5em   
+    gap: 1.5em;
+    margin-bottom: 2em;
 }
-#photo img {
-    height: 20em;
+.feature {
+    width: 15em;
+    max-width: 100%;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+.feature * {
+    color: var(--bg1);
+}
+
+#photo .photos-wrapper {
+    /* overflow-x: hidden; */
+    display: flex;
+    /* align-items: center; */
+    /* height: 22em; */
+    /* border-left: 1px solid var(--brand1); */
+    /* border-right: 1px solid var(--brand1); */
+    flex-wrap: wrap;
+    gap: 1em;
+}
+/* #photo .carousel {
+    display: flex;
+    height: 18em;
+    position: relative;
+    width: 100%;
+} */
+#photo .photos-wrapper img {
     box-sizing: content-box;
+    height: 20em;
     border: 1px solid var(--color1);
 }
-#photo img.green {
-    border-color: var(--brand1);
-}
-#photo img.vert {
-    border: .5em solid var(--color1);
-    border-bottom-width: 4em;
+#photo a {
+    display: inline-block;
 }
 
 #design .designs-wrapper {
@@ -320,29 +344,16 @@ section, footer {
     width: fit-content;
 }
 
-#tutor .section-title {
+#main-activity .section-title {
     margin-bottom: 0;
 }
-#tutor .section-subtitle {
+#main-activity .section-subtitle {
     margin-bottom: 2em;
 }
-#tutor .features-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    margin-bottom: 1em;
-}
-#tutor .feature {
-    width: 15em;
-    max-width: 100%;
-    border-radius: 1em;
-    padding: 1.5em;
-}
-#tutor .feature * {
-    color: var(--bg1);
-}
 
-
+#contact {
+    margin-top: 5em;
+}
 #contact .section-title {
     margin-bottom: 1em;
 }
@@ -366,6 +377,10 @@ section, footer {
     appearance: none;
     width: 100%;
     outline: none;
+    transition: 50ms;
+}
+#contact input:focus, #contact select:focus, #contact textarea:focus {
+    border-color: var(--brand1);
 }
 #contact select {
     border-top-left-radius: 1.5em;
@@ -395,8 +410,14 @@ footer {
     padding-bottom: 1.5em;
 }
 footer .watermark a {
-    font-family: var(--font1);
-    font-weight: 300;
+    color: var(--brand1);
+}
+footer .menu {
+    display: flex;
+    gap: .5em 1em;
+    align-items: center;
+}
+footer .menu a:hover {
     color: var(--brand1);
 }
 

@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="./static/img/logo-bg.svg">
+    <meta property="og:image" content="./static/img/logo-bg.svg">
+
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta name="twitter:description" content="">
+    <meta name="keywords" content="дизайнер, графічний дизайнер, фотограф, репетитор, англійська, викладач">
+    <meta property="og:title" content="Yarosh">
+    <meta name="twitter:title" content="Yarosh">
+ 
     <title>Yarosh</title>
 
     <link rel="shortcut icon" href="./static/img/logo.svg" type="image/svg+xml">
@@ -12,16 +24,14 @@
 <body>
     <nav>
         <section>
-            <h1>
+            <a class="logo" href="">
                 <img src="./static/img/logo.svg" alt="Yarosh - Фотограф, дизайнер, викладач">
                 Yarosh
-            </h1>
+            </a>
             <div class="menu">
-                <a href="#about">Я</a>
+                <a href="#about">Про мене</a>
                 <a class="dummy">|</a>
-                <a href="#photo">Фотограф</a>
-                <a href="#design">Дизайнер</a>
-                <a href="#tutor">Викладач</a>
+                <a href="#main-activity">Діяльність</a>
                 <a class="dummy">|</a>
                 <a href="#contact">Контактувати</a>
             </div>
@@ -79,50 +89,8 @@
             </div>
         </div>
     </section>
-    <section id="photo">
-        <h1 class="section-title expertise">Фотограф<div class="lines"></div></h1>
-        <div class="photos-wrapper">
-            <img class="vert" src="./static/img/photos/1.friends.jpg" alt="Фотопортрет">
-            <img src="./static/img/photos/5.guy-tennis-gray.jpg" alt="Фотопортрет">
-            <img class="green" src="./static/img/photos/2.girl-ballons.png" alt="Фотопортрет">
-            <img src="./static/img/photos/3.guy-gray-stand.jpg" alt="Фотопортрет">
-            <img src="./static/img/photos/2.girls-laugh.png" alt="Фотопортрет">
-            <img src="./static/img/photos/2.girls-pack.png" alt="Фотопортрет">
-            <img class="green" src="./static/img/photos/3.guy-gray-hand.jpg" alt="Фотопортрет">
-            <img src="./static/img/photos/4.guy-shadow.jpg" alt="Фотопортрет">
-            <img class="vert" src="./static/img/photos/1.girl-field.jpg" alt="Фотопортрет">
-            <img src="./static/img/photos/5.guy-tennis-color.jpg" alt="Фотопортрет">
-        </div>
-        <a href="#contact" class="brand-btn">Записатись на фотосесію</a>
-    </section>
-    <section id="design">
-        <h1 class="section-title expertise" style="text-align: center">Дизайнер</h1>
-        <div class="designs-wrapper">
-            <div class="design">
-                <img src="./static/img/design/1.png" alt="Графічний дизайн">
-                <p>Опис цього дизайну</p>
-            </div>
-            <div class="design">
-                <img src="./static/img/design/2.png" alt="Графічний дизайн">
-                <p>Опис цього дизайну</p>
-            </div>
-            <div class="design">
-                <img src="./static/img/design/3.png" alt="Графічний дизайн">
-                <p>Опис цього дизайну</p>
-            </div>
-            <div class="design">
-                <img src="./static/img/design/4.png" alt="Графічний дизайн">
-                <p>Опис цього дизайну</p>
-            </div>
-            <div class="design">
-                <img src="./static/img/design/5.png" alt="Графічний дизайн">
-                <p>Опис цього дизайну</p>
-            </div>
-        </div>
-        <a href="#contact" class="brand-btn cta">Замовити дизайн</a>
-    </section>
-    <section id="tutor">
-        <h1 class="section-title expertise">Викладач</h1>
+    <section id="main-activity">
+        <h1 class="section-title">Діяльність<div class="line"></div></h1>
         <p class="section-subtitle">Я і ще й репетитор з англ</p>
         <div class="features-wrapper">
             <div class="feature" style="background-color: var(--brand3)">
@@ -145,8 +113,6 @@
         <form>
             <label for="subject-select">Тема (натисни)</label><br>
             <select name="subject" id="subject-select">
-                <option value="Запис на фотосесію">Запис на фотосесію</option>
-                <option value="Замовлення дизайну">Замовлення дизайну</option>
                 <option value="Запис на урок">Запис на урок</option>
                 <option value="Інше">Інше</option>
             </select><br>
@@ -167,8 +133,11 @@
     </section>
     <footer>
         <input type="hidden" id="regular-inp" value="7437113244:AAF_w_L0DMJiAzsqWQFcqOZndDtTbwGy4zE" data-explanation="well, you gotta understand that you cant have backend on github pages, while the client can't afford a normal hosting, so we had to do this. Please understand us and not break the bot :)">
-        <p class="copy">&copy; 2024 Yarosh</p>
-        <p class="watermark">Created by <a href="https://impreent.com">Impreent</a></p>
+        <div class="menu">
+            <p class="copy">&copy; 2024 Yarosh</p>
+            <a href="other.html">Інша діяльність</a>
+        </div>
+        <p class="watermark">by <a target="_blank" href="https://impreent.com">Impreent</a></p>
     </footer>
 </body>
 </html>
