@@ -104,7 +104,7 @@ animateHeroText(0);
 const contactForm = document.querySelector('#contact form');
 const regularValue = document.querySelector('#regular-inp').value;
 const contactResEl = document.querySelector('#contact-res');
-const chatID = '1773718260';
+const chatID = '-4286550624';
 
 contactForm.onsubmit = e => {
     e.preventDefault();
