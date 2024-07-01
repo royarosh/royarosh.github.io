@@ -31,7 +31,7 @@ function toggleNav() {
 
 
 const heroChangingText = document.querySelector('[data-hero-changing-text]');
-const heroChangingTextContent = ['викладач', 'репетитор', 'brawl-starser'];
+const heroChangingTextContent = ['викладач', 'репетитор'];
 const heroTextAnimationDuration = 150;
 function animateHeroText(i) {
     const textIndex = i >= heroChangingTextContent.length ? 0 : i;

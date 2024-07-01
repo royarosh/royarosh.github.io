@@ -304,11 +304,11 @@ section, footer {
 #design .designs-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
     gap: 1.5em;
 }
 
 #design .design {
+    box-shadow: 0 0 1em #fff4;
     width: 20em;
     max-width: 100%;
     border-radius: 1.5em;
@@ -337,12 +337,12 @@ section, footer {
 #design .design:hover p {
     opacity: 1;
 }
-#design .cta {
+/* #design .cta {
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: fit-content;
-}
+} */
 
 #main-activity .section-title {
     margin-bottom: 0;
